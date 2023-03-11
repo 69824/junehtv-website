@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-compatible" content="edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal portfolio website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="header">
+     <div class="container">
+        <nav>
+            <img src="image/logo.png" class="logo">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">services</a></li>
+                <li><a href="#">portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>Mathematician/Editor</p>
+            <h1>Hi I'm<span>Abdulrhaman Junior</span><br>Sesay From Sierra Leone </h1>
+        </div>
+     </div>
+</div>
+<!-- -----------about---------- -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="image/user.png">
+            </div>
+            <div class="about-col-2">
+                <h1 class="subtitle">About Me</h1>
+                <p>Meet Abdulrhaman Junior Sesay, a talented third year Bsc
+                Mathematics student at Njala University. who is eager to learn
+                more new things and have strong passion for Database design 
+                and other computer langauges. Junior has his own youtube page
+                where he bring young people together and show case their talented
+                he might be a mathematics student but he loves the craft of 
+                technology.
+                Abdulrhaman Junior Sesay is discipline individual who manages his
+                time effectively and strives for excellence in all area of his
+                life. He is well respected by his peers and professors for his
+                strong work and leadership qualities.</p>
+
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>UI/UX</span><br>Editor</li>
+                        <li><span>Microsoft Word</span><br>Microsoft Access</li>
+                        <li><span>Youtuber</span><br>Content Creator</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>2022 - 2023 Current</span><br>Honourable Member
+                        of Parliament (S.R.C) Njala University Njala Campus</li>
+                        <li><span>2019 - 2020</span><br>Organizing Spelling Bee
+                        Competitions for pupils in my Community</li>
+                        <li><span>2022 - 2023 Current</span> Working With the Minister
+                        of Education and cultural Affairs Njala University
+                        Njala Campus (Jonthan Jhonny)<br></li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2023 - Current</span><br>Third Year Student
+                        Njala University Njala Campus</li>
+                        <li><span>2019 - 2020</span><br>WASSCE West African 
+                        Collegiate School (W.A.M)</li>
+                        <li><span>2015 - 2016</span><br>B.E.C.E</li>
+                    </ul>
+                </div>
+             </div>
+         </div>
+     </div>
+</div>
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
+</body>
+</html>
